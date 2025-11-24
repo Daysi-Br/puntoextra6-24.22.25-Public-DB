@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento Interactivo - Proyecto Multimedia</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>Elemento Interactivo</h1>
+            <p>Canvas interactivo con JavaScript</p>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="imagen.html">Galería de Imágenes</a></li>
+                <li><a href="audio.html">Reproductor de Audio</a></li>
+                <li><a href="video.html">Galería de Videos</a></li>
+                <li><a href="embebido.html">Contenido Embebido</a></li>
+                <li><a href="opcional.html">Elemento Interactivo</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <h2>Canvas Interactivo</h2>
+            <p>Este canvas permite interactuar con él. Haz clic y arrastra para dibujar líneas de colores.</p>
+            
+            <div class="canvas-container">
+                <canvas id="miCanvas" width="800" height="400"></canvas>
+                <div style="margin-top: 15px;">
+                    <button id="btnLimpiar" class="btn-descarga">Limpiar Canvas</button>
+                    <button id="btnCambiarColor" class="btn-descarga">Cambiar Color</button>
+                </div>
+            </div>
+            
+            <h2>GIF Animado</h2>
+            <p>Un elemento multimedia diferente: un GIF animado que muestra un efecto visual.</p>
+            
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="https://media.giphy.com/media/3o7aCTPPm4OHfRLSH6/giphy.gif" alt="GIF animado" style="max-width: 100%; border-radius: 8px;">
+            </div>
+        </main>
+        
+        <footer>
+            <p>Derechos de autor &copy; Diseñado por Daysi Britos - 2025</p>
+        </footer>
+    </div>
+    
+    <script src="js/script.js"></script>
+    <script>
+        // Script adicional para la página opcional
+        document.addEventListener('DOMContentLoaded', function() {
+            const canvas = document.getElementById('miCanvas');
+            const ctx = canvas.getContext('2d');
+            const btnLimpiar = document.getElementById('btnLimpiar');
+            const btnCambiarColor = document.getElementById('btnCambiarColor');
+            
+            let dibujando = false;
+            let colorActual = '#8a2be2'; // Color lila inicial
+            let ultimoX = 0;
+            let ultimoY = 0;
+            
+            // Configuración inicial del canvas
+            function inicializarCanvas() {
+                ctx.fillStyle = '#f0f0f0';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.lineWidth = 3;
+                ctx.lineJoin = 'round';
+                ctx.lineCap = 'round';
+            }
+            
+            inicializarCanvas();
+            
+            // Eventos para dibujar
+            canvas.addEventListener('mousedown', function(e) {
+                dibujando = true;
+                [ultimoX, ultimoY] = [e.offsetX, e.offsetY];
+            });
+            
+            canvas.addEventListener('mousemove', dibujar);
+            canvas.addEventListener('mouseup', () => dibujando = false);
+            canvas.addEventListener('mouseout', () => dibujando = false);
+            
+            function dibujar(e) {
+                if (!dibujando) return;
+                
+                ctx.strokeStyle = colorActual;
+                ctx.beginPath();
+                ctx.moveTo(ultimoX, ultimoY);
+                ctx.lineTo(e.offsetX, e.offsetY);
+                ctx.stroke();
+                
+                [ultimoX, ultimoY] = [e.offsetX, e.offsetY];
+            }
+            
+            // Botón para limpiar el canvas
+            btnLimpiar.addEventListener('click', inicializarCanvas);
+            
+            // Botón para cambiar color
+            btnCambiarColor.addEventListener('click', function() {
+                const colores = ['#8a2be2', '#9370db', '#6a0dad', '#ba55d3', '#9932cc', '#8b008b'];
+                const indiceAleatorio = Math.floor(Math.random() * colores.length);
+                colorActual = colores[indiceAleatorio];
+            });
+        });
+    </script>
+</body>
+</html>

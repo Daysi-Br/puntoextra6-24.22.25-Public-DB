@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Audio - Proyecto Multimedia</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>Reproductor de Audio</h1>
+            <p>Escucha y descarga diferentes archivos de audio</p>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="imagen.html">Galería de Imágenes</a></li>
+                <li><a href="audio.html">Reproductor de Audio</a></li>
+                <li><a href="video.html">Galería de Videos</a></li>
+                <li><a href="embebido.html">Contenido Embebido</a></li>
+                <li><a href="opcional.html">Elemento Interactivo</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <h2>Colección de Audios</h2>
+            <p>Reproduce los audios directamente en el navegador o descárgalos para escucharlos más tarde.</p>
+            
+            <div class="audio-lista">
+                <div class="audio-item">
+                    <h3>Música Relajante</h3>
+                    <p>Duración: 2:30 min | Formato: MP3 | Tamaño: 3.5 MB</p>
+                    <audio controls>
+                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                    <div>
+                        <a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" download="musica-relajante.mp3" class="btn-descarga">Descargar Audio</a>
+                    </div>
+                </div>
+                
+                <div class="audio-item">
+                    <h3>Sonidos de Naturaleza</h3>
+                    <p>Duración: 3:15 min | Formato: MP3 | Tamaño: 4.2 MB</p>
+                    <audio controls>
+                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                    <div>
+                        <a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" download="sonidos-naturaleza.mp3" class="btn-descarga">Descargar Audio</a>
+                    </div>
+                </div>
+                
+                <div class="audio-item">
+                    <h3>Música Épica</h3>
+                    <p>Duración: 4:10 min | Formato: MP3 | Tamaño: 5.8 MB</p>
+                    <audio controls>
+                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                    <div>
+                        <a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" download="musica-epica.mp3" class="btn-descarga">Descargar Audio</a>
+                    </div>
+                </div>
+                
+                <div class="audio-item">
+                    <h3>Melodía Suave</h3>
+                    <p>Duración: 2:50 min | Formato: MP3 | Tamaño: 3.9 MB</p>
+                    <audio controls>
+                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                    <div>
+                        <a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" download="melodia-suave.mp3" class="btn-descarga">Descargar Audio</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Derechos de autor &copy; Diseñado por Daysi Britos - 2025</p>
+        </footer>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Videos - Proyecto Multimedia</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>Galería de Videos</h1>
+            <p>Reproduce y descarga videos en formato MP4</p>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="imagen.html">Galería de Imágenes</a></li>
+                <li><a href="audio.html">Reproductor de Audio</a></li>
+                <li><a href="video.html">Galería de Videos</a></li>
+                <li><a href="embebido.html">Contenido Embebido</a></li>
+                <li><a href="opcional.html">Elemento Interactivo</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <h2>Videos en formato MP4</h2>
+            <p>Disfruta de nuestra colección de videos. Puedes reproducirlos directamente en el navegador o descargarlos.</p>
+            
+            <div class="video-lista">
+                <div class="video-item">
+                    <h3>Naturaleza en Movimiento</h3>
+                    <p>Duración: 0:30 min | Formato: MP4 | Tamaño: 8.5 MB</p>
+                    <video controls>
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                    <div>
+                        <a href="https://www.w3schools.com/html/mov_bbb.mp4" download="naturaleza-movimiento.mp4" class="btn-descarga">Descargar Video</a>
+                    </div>
+                </div>
+                
+                <div class="video-item">
+                    <h3>Animación Creativa</h3>
+                    <p>Duración: 0:15 min | Formato: MP4 | Tamaño: 4.2 MB</p>
+                    <video controls>
+                        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                    <div>
+                        <a href="https://www.w3schools.com/html/movie.mp4" download="animacion-creativa.mp4" class="btn-descarga">Descargar Video</a>
+                    </div>
+                </div>
+                
+                <div class="video-item">
+                    <h3>Efectos Visuales</h3>
+                    <p>Duración: 0:45 min | Formato: MP4 | Tamaño: 12.3 MB</p>
+                    <video controls>
+                        <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                    <div>
+                        <a href="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" download="efectos-visuales.mp4" class="btn-descarga">Descargar Video</a>
+                    </div>
+                </div>
+                
+                <div class="video-item">
+                    <h3>Arte en Acción</h3>
+                    <p>Duración: 1:10 min | Formato: MP4 | Tamaño: 15.7 MB</p>
+                    <video controls>
+                        <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                    <div>
+                        <a href="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4" download="arte-accion.mp4" class="btn-descarga">Descargar Video</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Derechos de autor &copy; Diseñado por Daysi Britos - 2025</p>
+        </footer>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
